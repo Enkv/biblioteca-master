@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Agregar libro</h1>
+
+<form th:action="@{/libros/guardar}" th:object="${libro}" method="post" id="libroForm">
+
+    <div th:if="${mensaje}">
+        <p th:text="${mensaje}"></p>
+    </div>
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
+
+    <input type="hidden" name="id" id="id" th:field="*{idLibro}">
+    <label for="isbn">ISBN: </label>
+    <input type="text" name="isbn" id="isbn" placeholder="EJ: 123456789" th:field="*{isbn}">
+    <br><br>
+    <label for="titulo">TITULO: </label>
+    <input type="text" name="titulo" id="titulo" th:field="*{titulo}">
+    <br><br>
+    <label for="aniopublicacion">AÑO PUBLICACION: </label>
+    <input type="text" name="aniopublicacion" id="aniopublicacion" th:field="*{aniopublicacion}">
+    <br><br>
+    <label for="autor">AUTOR: </label>
+    <input type="text" name="autor" id="autor" th:field="*{autor}">
+    <br><br>
+    <label for="stock">STOCK: </label>
+    <input type="number" name="stock" id="stock" th:field="*{stock}">
+    <br><br>
+    <button type="submit" name="enviar" id="enviar">ENVIAR</button>
+
+</form>
+</body>
+</html>

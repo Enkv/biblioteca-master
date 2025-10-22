@@ -4,10 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Data
 public class Libro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // ⚡ genera el ID en la BD
