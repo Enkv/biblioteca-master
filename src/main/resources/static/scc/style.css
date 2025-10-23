@@ -1,0 +1,472 @@
+/* ==========================================
+   COLORES INSTITUCIONALES
+   ========================================== */
+:root {
+    --azul-oscuro: #020D1F;
+    --amarillo: #E29700;
+    --gris: #EDEDEB;
+    --azul-secundario: #007EFF;
+    --blanco: #FFFFFF;
+    --gris-claro: #F8F9FA;
+    --sombra: rgba(2, 13, 31, 0.1);
+    --sombra-hover: rgba(2, 13, 31, 0.15);
+}
+
+/* ==========================================
+   ESTILOS GENERALES
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--gris-claro) 0%, var(--gris) 100%);
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
+.navbar {
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, #04132b 100%);
+    box-shadow: 0 4px 20px var(--sombra);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--amarillo) !important;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: translateY(-2px);
+    color: var(--blanco) !important;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+    color: var(--amarillo);
+}
+
+.logo-text {
+    background: linear-gradient(135deg, var(--amarillo) 0%, #ffb830 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-link {
+    color: var(--gris) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--amarillo);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover {
+    color: var(--amarillo) !important;
+    background: rgba(226, 151, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-link:hover::before {
+    width: 80%;
+}
+
+.nav-link.active {
+    color: var(--amarillo) !important;
+    background: rgba(226, 151, 0, 0.15);
+}
+
+.nav-link.active::before {
+    width: 80%;
+}
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+.main-content {
+    padding: 3rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+/* ==========================================
+   CARD FORM
+   ========================================== */
+.form-card {
+    background: var(--blanco);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px var(--sombra);
+    border: none;
+    overflow: hidden;
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, var(--azul-secundario) 100%);
+    color: var(--blanco);
+    padding: 1.5rem 2rem;
+    border-bottom: 4px solid var(--amarillo);
+}
+
+.card-header h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.card-header i {
+    color: var(--amarillo);
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+/* ==========================================
+   FORM ELEMENTS
+   ========================================== */
+.form-label {
+    font-weight: 600;
+    color: var(--azul-oscuro);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.form-label i {
+    color: var(--azul-secundario);
+}
+
+.form-control-custom {
+    border: 2px solid var(--gris);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--gris-claro);
+}
+
+.form-control-custom:focus {
+    border-color: var(--azul-secundario);
+    box-shadow: 0 0 0 0.25rem rgba(0, 126, 255, 0.15);
+    background: var(--blanco);
+    transform: translateY(-2px);
+}
+
+.form-control-custom:hover {
+    border-color: var(--azul-secundario);
+}
+
+.form-control-custom::placeholder {
+    color: #999;
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.btn-custom {
+    background: linear-gradient(135deg, var(--azul-secundario) 0%, #0066cc 100%);
+    border: none;
+    color: var(--blanco);
+    padding: 0.875rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 126, 255, 0.3);
+}
+
+.btn-custom:hover {
+    background: linear-gradient(135deg, #0066cc 0%, var(--azul-secundario) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 126, 255, 0.4);
+    color: var(--blanco);
+}
+
+.btn-custom:active {
+    transform: translateY(-1px);
+}
+
+.btn-search {
+    background: linear-gradient(135deg, var(--amarillo) 0%, #d18900 100%);
+    border: none;
+    color: var(--azul-oscuro);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0 10px 10px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(226, 151, 0, 0.3);
+}
+
+.btn-search:hover {
+    background: linear-gradient(135deg, #d18900 0%, var(--amarillo) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(226, 151, 0, 0.4);
+    color: var(--azul-oscuro);
+}
+
+.input-group .form-control-custom {
+    border-radius: 10px 0 0 10px;
+}
+
+/* ==========================================
+   ALERTS
+   ========================================== */
+.alert-custom {
+    border-radius: 10px;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 15px var(--sombra);
+}
+
+.alert-success {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+}
+
+.alert-danger {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.footer {
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, #04132b 100%);
+    color: var(--gris);
+    padding: 1.5rem 0;
+    box-shadow: 0 -4px 20px var(--sombra);
+}
+
+.footer p {
+    font-size: 0.95rem;
+}
+
+.footer i {
+    color: var(--amarillo);
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-slideDown {
+    animation: slideDown 0.4s ease-out;
+}
+
+/* ==========================================
+   LOADING SPINNER
+   ========================================== */
+.spinner-border-custom {
+    color: var(--amarillo);
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .card-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .main-content {
+        padding: 2rem 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 70px;
+    }
+
+    .card-header {
+        padding: 1rem 1.5rem;
+    }
+
+    .card-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn-search {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .form-control-custom {
+        font-size: 0.95rem;
+    }
+}
+
+/* ==========================================
+   SMOOTH SCROLLING
+   ========================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
+   VALIDATION STYLES
+   ========================================== */
+.was-validated .form-control:valid {
+    border-color: #28a745;
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback {
+    display: block;
+}
+
+
+/*index*/
+.hero-section {
+            background: linear-gradient(rgba(2, 13, 31, 0.8), rgba(2, 13, 31, 0.8)), url('https://picsum.photos/1200/400?random=1') no-repeat center center;
+            background-size: cover;
+            color: var(--blanco);
+            padding: 5rem 0;
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 10px 40px var(--sombra);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-weight: 800;
+            font-size: 3rem;
+            color: var(--amarillo);
+        }
+
+        .hero-section p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 1rem auto 0;
+            color: var(--gris);
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--sombra);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 2rem;
+            background: var(--blanco);
+            height: 100%; /* Asegura que todas las cards tengan la misma altura */
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px var(--sombra-hover);
+        }
+
+        .feature-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+
+        .card-title {
+            font-weight: 700;
+            color: var(--azul-oscuro);
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        /* Colores para los iconos de las cards */
+        .icon-catalogo { color: var(--azul-secundario); }
+        .icon-agregar { color: #28a745; } /* Verde para agregar */
+        .icon-prestamos { color: var(--amarillo); }
+        .icon-usuarios { color: #dc3545; } /* Rojo/Peligro para gestión */
+
+        .btn-card {
+            margin-top: 1rem;
+            background-color: var(--azul-secundario);
+            border-color: var(--azul-secundario);
+            transition: all 0.3s ease;
+        }
+
+        .btn-card:hover {
+             background-color: var(--azul-oscuro);
+             border-color: var(--azul-oscuro);
+        }

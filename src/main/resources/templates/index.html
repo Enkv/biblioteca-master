@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Sistema de Biblioteca Escolar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" th:href="@{/}">
+            <i class="fas fa-book-open me-2 logo-icon"></i>
+            <span class="logo-text">BiblioSystem</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" th:href="@{/}"> <i class="fas fa-home me-1"></i> Inicio
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/libros/nuevo}">
+                        <i class="fas fa-plus-circle me-1"></i> Nuevo Libro
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/libros/lista}">
+                        <i class="fas fa-list me-1"></i> Lista de Libros
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="main-content">
+    <div class="container px-4">
+
+        <div class="hero-section animate-slideDown">
+            <h1 class="mb-3">
+                <i class="fas fa-graduation-cap me-2"></i>
+                Biblioteca Escolar
+            </h1>
+            <p class="lead">
+                Bienvenido al panel de gestión de BiblioSystem. Accede rápidamente a las funciones clave para administrar tu catálogo de libros y préstamos.
+            </p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
+
+            <div class="col animate-fadeInUp" style="animation-delay: 0.1s;">
+                <a th:href="@{/libros/lista}" class="text-decoration-none d-block">
+                    <div class="card feature-card">
+                        <i class="fas fa-book-reader feature-icon icon-catalogo"></i>
+                        <h5 class="card-title">Ver Catálogo</h5>
+                        <p class="card-text">Explora y busca todos los libros disponibles en la biblioteca.</p>
+                        <span class="btn btn-sm btn-card">Ir a la lista</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col animate-fadeInUp" style="animation-delay: 0.2s;">
+                <a th:href="@{/libros/nuevo}" class="text-decoration-none d-block">
+                    <div class="card feature-card">
+                        <i class="fas fa-plus-circle feature-icon icon-agregar"></i>
+                        <h5 class="card-title">Agregar Libro</h5>
+                        <p class="card-text">Registra nuevos ejemplares al inventario del sistema.</p>
+                        <span class="btn btn-sm btn-card">Añadir</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col animate-fadeInUp" style="animation-delay: 0.3s;">
+                <a th:href="@{/prestamos/lista}" class="text-decoration-none d-block">
+                    <div class="card feature-card">
+                        <i class="fas fa-exchange-alt feature-icon icon-prestamos"></i>
+                        <h5 class="card-title">Préstamos</h5>
+                        <p class="card-text">Administra los libros prestados, devoluciones y vencimientos.</p>
+                        <span class="btn btn-sm btn-card">Ver Préstamos</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col animate-fadeInUp" style="animation-delay: 0.4s;">
+                <a th:href="@{/usuarios/lista}" class="text-decoration-none d-block">
+                    <div class="card feature-card">
+                        <i class="fas fa-users-cog feature-icon icon-usuarios"></i>
+                        <h5 class="card-title">Usuarios</h5>
+                        <p class="card-text">Gestiona a los alumnos, profesores y personal de la biblioteca.</p>
+                        <span class="btn btn-sm btn-card">Gestionar</span>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="alert alert-custom alert-success animate-fadeInUp" role="alert">
+                    <i class="fas fa-chart-line me-2"></i>
+                    En el futuro se implementarán estadisticas en esta sección
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer mt-5">
+    <div class="container text-center">
+        <p class="mb-0">
+            <i class="fas fa-book-reader me-2"></i>
+            Sistema de Biblioteca © 2025
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
