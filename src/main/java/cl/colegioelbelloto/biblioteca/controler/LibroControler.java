@@ -53,7 +53,7 @@ public class LibroControler {
         }else{
             model.addAttribute("libro",libro);
         }
-        return "libro-form";
+        return "libro_form";
 
     }
     @GetMapping("/eliminar/{id}")

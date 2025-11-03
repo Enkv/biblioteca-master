@@ -1,8 +1,40 @@
 # Sistema Biblioteca
 * **Intregrante:** Diego Hermosilla
 
-descripcion
-foto
-explicar como hacerlpo correr
-las tecnologias que usaron
-etc.
+Este sistema de bibliotecas fue hecho aplicando los conceptos de
+Programacion orientada a Objetos (POO) en java, esto se vio
+medianre la creaciones de clases que representan libros, usuarios
+y prestamos, los cuales incluyen atributos, metodos,
+constructores, getters, setters y relaciones entre objetos.
+
+***Estructura de las carpetas:***
+
+* Model: Define las entidades del sistema y su estructura de datos.
+* Repository: Es la capa de acceso a datos, encargada de interactuar con la base de datos.
+* Service: Separa el controlador del acceso directo a datos.
+* Controller: Gestiona las solicitudes del usuario, usa los servicios y retorna las vistas correspondientes.
+* Templates y Static: Contiene los archivos HTML y CSS para la interfaz del usuario.
+
+Diagrama de clase:
+https://southcentralus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=Y2NiNjViY2QtMDRiYS00MjFhLTg3OTEtYTI5OWE3MDkwNGI2fFNQTw&docid=https%3A%2F%2Fcolegioelbelloto.sharepoint.com%2F_api%2Fv2.0%2Fdrives%2Fb!Zs9jo1xy20WCGWZs0xj4jZgeaqk_s85Etje8qqnsIthqoWslckl1QZAXaTMRsLSi%2Fitems%2F016RI57PH5VZOM4VMKHJDLU4NEET2KBEBB%3Ftempauth%3Dv1.eyJzaXRlaWQiOiJhMzYzY2Y2Ni03MjVjLTQ1ZGItODIxOS02NjZjZDMxOGY4OGQiLCJhcHBfZGlzcGxheW5hbWUiOiJBc3NpZ25tZW50cyBVSSIsImFwcGlkIjoiY2NiNjViY2QtMDRiYS00MjFhLTg3OTEtYTI5OWE3MDkwNGI2IiwiYXVkIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2NvbGVnaW9lbGJlbGxvdG8uc2hhcmVwb2ludC5jb21AOGE5MzY1OTQtYmE5Mi00NzA1LTg1ZGMtMjE5ZWE4ZWJlZTM5IiwiZXhwIjoiMTc2MjE0OTYwMCJ9.CkAKDGVudHJhX2NsYWltcxIwQ1BmeW44Z0dFQUFhRm5SNlgwOVpURFJOYTFWWFpHUlZObU5oYWpCbVFWRXFBQT09CjIKCmFjdG9yYXBwaWQSJDAwMDAwMDAzLTAwMDAtMDAwMC1jMDAwLTAwMDAwMDAwMDAwMAoKCgRzbmlkEgI4NBIECNa-AhoMNDAuMTI2LjQ1LjI2KixBWG9KamZxN3ZPei9XMnBNazg1K0gxKzBpY2VLdWlYVU51ZCtGb2NwTERvPTCkATgBShBoYXNoZWRwcm9vZnRva2VuUghbImttc2kiXWokMDA3YzNjYzktZDY5NC1lNjAzLTkxNmEtMjNhYWY2NTUwZDk1cikwaC5mfG1lbWJlcnNoaXB8MTAwMzIwMDBjZGFmZDhlMEBsaXZlLmNvbXoBMoIBEgmUZZOKkroFRxGF3CGeqOvuOZIBCkRpZWdvIEVsb3maARRIZXJtb3NpbGxhIFNvdG9tYXlvcqIBIGRoZXJtb3NpbGxhQGNvbGVnaW9lbGJlbGxvdG8uY29tqgEQMTAwMzIwMDBDREFGRDhFMLIBOWFsbGZpbGVzLndyaXRlIGdyb3VwLnJlYWQgYWxsc2l0ZXMud3JpdGUgYWxscHJvZmlsZXMucmVhZOIBFnR6X09ZTDRNa1VXZGRVNmNhajBmQVE.AAdBWnQmKq5ERyxO8LJnHWwf0DtWwbQ_ZyHKvkkp65o%26version%3DPublished&width=9999&height=9999&cb=63894359707
+
+Diagrama de caso de uso:
+https://southcentralus1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=Y2NiNjViY2QtMDRiYS00MjFhLTg3OTEtYTI5OWE3MDkwNGI2fFNQTw&docid=https%3A%2F%2Fcolegioelbelloto.sharepoint.com%2F_api%2Fv2.0%2Fdrives%2Fb!Zs9jo1xy20WCGWZs0xj4jZgeaqk_s85Etje8qqnsIthqoWslckl1QZAXaTMRsLSi%2Fitems%2F016RI57PHEAGS4GG3ORJHIIV53CDB6ELVB%3Ftempauth%3Dv1.eyJzaXRlaWQiOiJhMzYzY2Y2Ni03MjVjLTQ1ZGItODIxOS02NjZjZDMxOGY4OGQiLCJhcHBfZGlzcGxheW5hbWUiOiJBc3NpZ25tZW50cyBVSSIsImFwcGlkIjoiY2NiNjViY2QtMDRiYS00MjFhLTg3OTEtYTI5OWE3MDkwNGI2IiwiYXVkIjoiMDAwMDAwMDMtMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwL2NvbGVnaW9lbGJlbGxvdG8uc2hhcmVwb2ludC5jb21AOGE5MzY1OTQtYmE5Mi00NzA1LTg1ZGMtMjE5ZWE4ZWJlZTM5IiwiZXhwIjoiMTc2MjE0OTYwMCJ9.CkAKDGVudHJhX2NsYWltcxIwQ1BmeW44Z0dFQUFhRm5SNlgwOVpURFJOYTFWWFpHUlZObU5oYWpCbVFWRXFBQT09CjIKCmFjdG9yYXBwaWQSJDAwMDAwMDAzLTAwMDAtMDAwMC1jMDAwLTAwMDAwMDAwMDAwMAoKCgRzbmlkEgI4NBIECNa-AhoMNDAuMTI2LjQ1LjI2KixmVTIwMnNVOFYrMjdEeGtnTk13bHRBYlVqc0VHTnpNNkZaSTVPRXpVdkc4PTCkATgBShBoYXNoZWRwcm9vZnRva2VuUghbImttc2kiXWokMDA3YzNjYzktZDY5NC1lNjAzLTkxNmEtMjNhYWY2NTUwZDk1cikwaC5mfG1lbWJlcnNoaXB8MTAwMzIwMDBjZGFmZDhlMEBsaXZlLmNvbXoBMoIBEgmUZZOKkroFRxGF3CGeqOvuOZIBCkRpZWdvIEVsb3maARRIZXJtb3NpbGxhIFNvdG9tYXlvcqIBIGRoZXJtb3NpbGxhQGNvbGVnaW9lbGJlbGxvdG8uY29tqgEQMTAwMzIwMDBDREFGRDhFMLIBOWFsbGZpbGVzLndyaXRlIGdyb3VwLnJlYWQgYWxsc2l0ZXMud3JpdGUgYWxscHJvZmlsZXMucmVhZOIBFnR6X09ZTDRNa1VXZGRVNmNhajBmQVE.j51VvPPxsG1U8xtQ51ijOnWb7wmzL_Vi9XT-hjhc5LE%26version%3DPublished&width=9999&height=9999&cb=63894359836
+
+Al hacer correr BibliotecaApplication, escriba en la barra de urls "localhost:8080"
+para acceder a la pagina, ahí podra ver los libros disponibles en la biblioteca,
+agregar libros a la biblioteca, administrar los libros prestados, 
+las devoluciones y los vencimientos y gestionar a los alumnos, 
+profesores y el personal de la biblioteca. 
+
+Para acceder a la base de datos escriba "localhost:8080/h2-console" en la barra de urls 
+luego escriba "jdbc:h2:mem:bibliotecadb" en el JDBC URL ahi dentro podra ver los datos, hacer
+ los select y hacer las busquedas que encuentre necesarias
+ 
+
+Las tecnologias que se usaron fueron:
+
+* Spring Boot y Java para el backend.
+* H2 Console para simular la base de datos.
+* Conexión a la API externa de Google Books para buscar libros por ISBN.
+* HTML, CSS y Bootstrap para el frontend.
